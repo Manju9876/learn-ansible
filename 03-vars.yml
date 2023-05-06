@@ -18,11 +18,23 @@
 
 - name: demo on play level variables
   hosts: all
+  vars_files:
+    -exvars.yml
+  tasks:
+    - name: printing variable
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+
+
+
+
+- name: demo on play level variables
+  hosts: all
   tasks:
     - name: printing variable
       ansible.builtin.debug:
         msg: "{{ URL }}"
       vars:
-        URL: play.example.com
+        URL: tasks.example.com
 
 ##In the above code only the varibale is accessed to that perticular tasks, otther tasts cannot access it
