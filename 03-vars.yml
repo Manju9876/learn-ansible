@@ -21,7 +21,7 @@
   vars_files:
     - exvars.yml
   tasks:
-    - name: printing variable
+    - name: printing variable in vars_file loading
       ansible.builtin.debug:
         msg: URL - {{ URL }}
 
