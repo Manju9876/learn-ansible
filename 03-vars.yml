@@ -19,7 +19,7 @@
 - name: demo on play level variables
   hosts: all
   vars_files:
-    -exvars.yml
+    - exvars.yml
   tasks:
     - name: printing variable
       ansible.builtin.debug:
