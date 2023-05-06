@@ -39,9 +39,9 @@
 
 ##In the above code only the varibale is accessed to that perticular tasks, otther tasts cannot access it
 
-- name: demo on roles variable
+- name: Variable from Roles
   hosts: all
   vars:
-    URL_PLAY: play.example.comm
+    URL_PLAY: play.example.com
   roles:
-    - sample:
+    - sample
