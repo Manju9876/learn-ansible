@@ -6,3 +6,23 @@
     - name: printing variable
       ansible.builtin.debug:
         msg: URL - {{ URL }}
+
+
+
+
+### In ansible varibale wiil be accessed using {{}}.
+### Ansible SUpports both sngle and double quotes , however quotes are not madentory in all cases
+
+         #  msg: url - {{ URL }] --> this does not required qoutes
+         #  msg: "{{ URL }}" --> this required  to be quoted
+
+- name: demo on play level variables
+  hosts: all
+  tasks:
+    - name: printing variable
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+      vars:
+        URL: play.example.com
+
+##In the above code only the varibale is accessed to that perticular tasks, otther tasts cannot access it
