@@ -16,7 +16,7 @@
          #  msg: url - {{ URL }] --> this does not required qoutes
          #  msg: "{{ URL }}" --> this required  to be quoted
 
-- name: demo on play level variables
+- name: load vars form a file
   hosts: all
   vars_files:
     - exvars.yml
