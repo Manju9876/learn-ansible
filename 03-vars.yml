@@ -28,7 +28,7 @@
 
 
 
-- name: demo on play level variables
+- name: demo on task level varible
   hosts: all
   tasks:
     - name: printing variable
