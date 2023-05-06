@@ -38,3 +38,10 @@
         URL: tasks.example.com
 
 ##In the above code only the varibale is accessed to that perticular tasks, otther tasts cannot access it
+
+- name: demo on roles variable
+  hosts: all
+  vars:
+    URL_PLAY: play.example.comm
+  roles:
+    - sample:

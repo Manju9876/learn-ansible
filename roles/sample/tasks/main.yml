@@ -1,3 +1,11 @@
 - name: printing hello world
   ansible.builtin.debug:
     msg: hellow world form role sample
+
+- name: print variable form role
+  ansible.builtin.debug:
+    msg: URL- {{ URL }}
+
+- name: print variable form play
+  ansible.builtin.debug:
+    msg: URL_PLAY - {{ URL_PLAY }}
